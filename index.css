@@ -1,0 +1,231 @@
+@charset "UTF-8";
+body {
+  font-family: "Playwrite GB S", cursive;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("public/bg.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0;
+  }
+}
+
+.outside-wrap {
+  display: none;
+  z-index: 2;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: 0.5s;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, lightpink 0%, lightblue 51%, lightgreen 100%);
+  animation: color-gradient 7s linear infinite reverse, fadeIn 5s;
+}
+
+.wrapper {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+.wrapper .icon-ballon {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  z-index: 1;
+  top: -10%;
+}
+.wrapper .icon-cake {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  width: 6rem;
+  height: 6rem;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  z-index: 10;
+  color: #394A52;
+}
+
+.sessions {
+  margin-top: 2rem;
+  border-radius: 12px;
+  position: relative;
+}
+
+li {
+  padding-bottom: 1.5rem;
+  border-left: 1px solid #abaaed;
+  position: relative;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+li:last-child {
+  border: 0px;
+  padding-bottom: 0;
+}
+li:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 1px solid #4e5ed3;
+  box-shadow: 3px 3px 0px #bab5f8;
+  box-shadow: 3px 3px 0px #bab5f8;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  top: 0px;
+}
+
+.time {
+  color: #2a2839;
+  font-weight: 500;
+}
+@media screen and (min-width: 601px) {
+  .time {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .time {
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+  }
+}
+
+p {
+  color: #4f4f4f;
+  line-height: 1.5;
+  margin-top: 0.4rem;
+}
+@media screen and (max-width: 600px) {
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes color-gradient {
+  0% {
+    background-position: left top;
+  }
+  12.5% {
+    background-position: center top;
+  }
+  25% {
+    background-position: right top;
+  }
+  37.5% {
+    background-position: left center;
+  }
+  50% {
+    background-position: center center;
+  }
+  62.5% {
+    background-position: right center;
+  }
+  75% {
+    background-position: left bottom;
+  }
+  87.5% {
+    background-position: center bottom;
+  }
+  100% {
+    background-position: right bottom;
+  }
+}
+.balloon-container {
+  z-index: 3;
+  position: absolute;
+  height: 100vh;
+  padding: 1em;
+  box-sizing: border-box;
+  display: none;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: opacity 500ms;
+}
+
+.balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #FDFD96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.balloon:after {
+  content: "▲";
+  text-align: center;
+  display: block;
+  position: absolute;
+  color: inherit;
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-300vh);
+    opacity: 0;
+  }
+}
+.invitation .title {
+  color: #fefefe;
+  text-shadow: 2px 2px #bfbfbf;
+}
+.invitation .wrap-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 8rem;
+}
+.invitation .wrap-btn p {
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px #bfbfbf;
+  z-index: 5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=index.css.map */
